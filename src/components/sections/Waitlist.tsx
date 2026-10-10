@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimateIn } from "@/components/AnimateIn";
-import { WaitlistSlot } from "@/components/waitlist/WaitlistSlot";
+import { WaitlistForm } from "@/components/waitlist/WaitlistForm";
 
 export function Waitlist() {
   return (
@@ -33,7 +33,7 @@ export function Waitlist() {
                 </p>
               </div>
               <div className="p-4 lg:p-14 border-t lg:border-t-0 lg:border-l border-(--border) flex items-center">
-                <WaitlistSlot />
+                <WaitlistForm />
               </div>
             </div>
           </div>

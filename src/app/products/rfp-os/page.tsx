@@ -23,7 +23,7 @@ import {
   Plus,
 } from "lucide-react";
 import { RfpOsPanel } from "@/components/MockPanel";
-import { WaitlistSlot } from "@/components/waitlist/WaitlistSlot";
+import { WaitlistForm } from "@/components/waitlist/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "RFP OS: proposal automation",
@@ -497,7 +497,7 @@ export default function RfpOsPage() {
               We&apos;re opening access in phases. As each phase opens, we&apos;ll send invitations in waves
               until everyone on the waitlist has been invited.
             </p>
-            <WaitlistSlot preselect="rfp-os" />
+            <WaitlistForm preselect="rfp-os" />
           </div>
         </section>
       </div>

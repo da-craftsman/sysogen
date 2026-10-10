@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, GitCommit, Terminal, ClipboardList, Server, X } from "lucide-react";
-import { WaitlistSlot } from "@/components/waitlist/WaitlistSlot";
+import { WaitlistForm } from "@/components/waitlist/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "ProveStack: AI Code Provenance",
@@ -175,7 +175,7 @@ export default function ProveStackPage() {
           <p className="text-[14px] text-(--muted) mb-6">
             We&apos;re onboarding the first cohort now. Tell us about your setup and we&apos;ll be in touch.
           </p>
-          <WaitlistSlot preselect="provestack" />
+          <WaitlistForm preselect="provestack" />
         </div>
 
         {/* Built by Sysogen */}

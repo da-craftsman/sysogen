@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { WaitlistSlot } from "@/components/waitlist/WaitlistSlot";
+import { WaitlistForm } from "@/components/waitlist/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "Join the waitlist",
@@ -24,7 +24,7 @@ export default function WaitlistPage() {
         </div>
 
         <div className="card-base p-8 lg:p-10" style={{ borderColor: "rgba(79,140,255,0.3)" }}>
-          <WaitlistSlot />
+          <WaitlistForm />
         </div>
       </div>
     </div>

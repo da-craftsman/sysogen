@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { WaitlistSlot } from "@/components/waitlist/WaitlistSlot";
+import { WaitlistForm } from "@/components/waitlist/WaitlistForm";
 
 export const metadata: Metadata = {
   title: "InboxGraph: Local Email Analysis",
@@ -69,7 +69,7 @@ export default function InboxGraphPage() {
           <p className="text-[14px] text-(--muted) mb-6">
             We&apos;re opening access in phases and will invite people in waves.
           </p>
-          <WaitlistSlot preselect="inboxgraph" />
+          <WaitlistForm preselect="inboxgraph" />
         </div>
       </div>
     </div>
