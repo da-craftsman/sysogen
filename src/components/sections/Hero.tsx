@@ -89,7 +89,7 @@ export function Hero() {
                 className='w-1.5 h-1.5 rounded-full bg-[#4ade80] flex-shrink-0'
                 style={{ boxShadow: '0 0 0 4px rgba(74,222,128,0.18)' }}
               />
-              EU-Headquartered &nbsp;·&nbsp; Built for the EU AI Act
+              AI Automation &nbsp;·&nbsp; Products and Engineering
             </span>
           </div>
         </AnimateIn>
@@ -97,20 +97,19 @@ export function Hero() {
         {/* Headline */}
         <AnimateIn delay={0.1}>
           <h1 className='font-bold tracking-tight leading-[1.05] text-(--foreground) text-[clamp(44px,6vw,96px)] max-w-300'>
-            AI you can ship
+            AI automation for the work
             <br />
-            <span className='gradient-text'>
-              and prove you shipped responsibly.
-            </span>
+            <span className='gradient-text'>nobody wants to do.</span>
           </h1>
         </AnimateIn>
 
         {/* Subtext */}
         <AnimateIn delay={0.2}>
           <p className='mt-7 text-(--muted) leading-[1.55] max-w-160 text-[clamp(16px,1.6vw,19px)]'>
-            Sysogen helps regulated enterprises adopt AI without the security
-            and compliance debt. We embed with your team, ship production-grade
-            systems, and leave a documented foundation when we walk out.
+            Sysogen builds AI products and custom automation for the
+            repetitive, document-heavy work that fills your team&apos;s week:
+            proposals, reviews, reporting, request triage. Your people approve
+            what matters and get their hours back.
           </p>
         </AnimateIn>
 
@@ -121,8 +120,8 @@ export function Hero() {
               Book a discovery call
               <ArrowRight className='w-3.5 h-3.5' />
             </a>
-            <a href='/labs/provestack' className='btn-ghost'>
-              See ProveStack
+            <a href='/products/rfp-os' className='btn-ghost'>
+              Explore RFP OS
             </a>
           </div>
         </AnimateIn>

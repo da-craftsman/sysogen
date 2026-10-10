@@ -10,7 +10,7 @@ export function TeamLink() {
       <div className="site-container">
         <AnimateIn>
           <div className="flex flex-wrap items-center gap-4 text-[15px] text-(--muted)">
-            <span>Founded in Coimbra, Portugal. EU-registered.</span>
+            <span>Founded in Coimbra, Portugal. Working with teams worldwide.</span>
             <Link
               href="/about"
               className="inline-flex items-center gap-1.5 text-(--accent) hover:text-(--foreground) font-medium transition-colors"

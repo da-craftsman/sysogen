@@ -9,7 +9,7 @@ const facts = [
   ["Response time", "Within one business day"],
   ["First call", "Free, 30 minutes"],
   ["Engagement length", "6–16 weeks typical"],
-  ["Time zones", "EU + global remote"],
+  ["Time zones", "Remote, worldwide"],
 ];
 
 export function CTA() {
@@ -49,9 +49,9 @@ export function CTA() {
             <div className="relative max-w-190">
               <span className="eyebrow" style={{ color: "var(--accent-2)" }}>Let&apos;s talk</span>
               <h2 className="mt-5 mb-5 font-bold leading-[1.05] text-(--foreground) text-[clamp(32px,5vw,64px)] tracking-tight">
-                Tell us what you&apos;re
+                Tell us what you
                 <br />
-                <span className="gradient-text-blue">trying to ship.</span>
+                <span className="gradient-text-blue">want to automate.</span>
               </h2>
               <p className="text-(--muted) leading-[1.55] mb-10 text-[clamp(15px,1.5vw,17px)] max-w-140">
                 Book a 30-minute call. We&apos;ll listen, ask questions, and tell you honestly

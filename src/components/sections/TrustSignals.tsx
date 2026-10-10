@@ -2,28 +2,23 @@
 
 import { AnimateIn, StaggerContainer, staggerItem } from "@/components/AnimateIn";
 import { motion } from "framer-motion";
-import { Building2, Code2, Layers, Lock, BookOpen, Globe } from "lucide-react";
+import { Building2, Code2, Layers, Lock, BookOpen, UserCheck } from "lucide-react";
 
 const items = [
   {
     title: "Senior engineers, regulated-industry experience",
-    body: "Our team has shipped production systems for regulated industries — finance, logistics, healthcare, public sector — with real infrastructure, real audits, and real on-call rotations.",
+    body: "Our team has shipped production systems for regulated industries (finance, logistics, healthcare, public sector) with real infrastructure, real audits and real on-call rotations.",
     icon: Building2,
   },
   {
     title: "We ship code, not slides",
-    body: "Our deliverable is working software in your repo. We write tests, run on-call shifts, and pair with your team — not roadmap decks.",
+    body: "Our deliverable is working software in your repo. We write tests, run on-call shifts and pair with your team. No roadmap decks.",
     icon: Code2,
   },
   {
     title: "Deep, not wide",
-    body: "We specialize in event-driven architecture, EU-regulated AI deployments, and provenance for AI-generated code. We don't pretend to do everything.",
+    body: "We specialize in document-heavy process automation, event-driven architecture and AI governance. We don't pretend to do everything.",
     icon: Layers,
-  },
-  {
-    title: "Security and governance first",
-    body: "Every system we deliver is designed for auditability and zero-trust from day one. SOC 2 controls, EU AI Act Article 50 evidence, and signed-commit provenance are built in — not bolted on.",
-    icon: Lock,
   },
   {
     title: "Knowledge transfer built in",
@@ -31,9 +26,14 @@ const items = [
     icon: BookOpen,
   },
   {
-    title: "EU-based, EU-regulated",
-    body: "Headquartered in Coimbra, Portugal (NIF 519018265, CAE 62201). We work natively with GDPR, the EU AI Act, NIS2, and the upcoming Digital Operational Resilience Act (DORA).",
-    icon: Globe,
+    title: "People approve what matters.",
+    body: "Our automations put a human approval step wherever a mistake is expensive, and we design them so outputs can be traced back to their sources.",
+    icon: UserCheck,
+  },
+  {
+    title: "Security and governance first",
+    body: "Every system we deliver is designed for auditability and zero trust from day one. Access controls, audit trails and data boundaries are part of the design, not added at the end.",
+    icon: Lock,
   },
 ];
 
@@ -47,7 +47,7 @@ export function TrustSignals() {
             <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
               Engineering-led,
               <br />
-              EU-compliant, paid for outcomes.
+              product-backed, paid for outcomes.
             </h2>
           </div>
         </AnimateIn>

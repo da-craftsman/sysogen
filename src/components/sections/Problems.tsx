@@ -2,32 +2,32 @@
 
 import { AnimateIn, StaggerContainer, staggerItem } from "@/components/AnimateIn";
 import { motion } from "framer-motion";
-import { ShieldAlert, Activity, LayoutGrid, Clock } from "lucide-react";
+import { Clock, Activity, Compass, EyeOff } from "lucide-react";
 
 const problems = [
   {
     n: "01",
-    title: "Shadow AI is spreading unchecked",
-    body: "Employees pasting confidential data into ChatGPT, Copilot, and a dozen other tools. No inventory, no policy, no audit trail. Compliance and security teams flying blind.",
-    icon: ShieldAlert,
+    title: "Skilled people doing repetitive work.",
+    body: "Proposal managers reformatting the same answers. Analysts copying figures between systems. Team leads reading every inbound request just to route it. Expensive hours go into work a well-built system can do.",
+    icon: Clock,
   },
   {
     n: "02",
-    title: "AI pilots that never reach production",
-    body: "POCs that demo beautifully but die at the first scale test. Data isn't ready. Pipelines don't exist. Nobody owns it. The Slack channel goes quiet.",
+    title: "Automation pilots that never reach production.",
+    body: "POCs that demo beautifully die at the first scale test. The data isn't ready, the pipelines don't exist and nobody owns it. The Slack channel goes quiet.",
     icon: Activity,
   },
   {
     n: "03",
-    title: "No provenance, no audit trail",
-    body: "Auditors ask which lines of code came from which model, when, under whose review — and the engineering team can't answer. With the EU AI Act now in force, that's a regulatory exposure, not just a documentation gap.",
-    icon: LayoutGrid,
+    title: "No clear plan for AI.",
+    body: "Leadership wants AI yesterday. Nobody knows what to automate first, what to build, what to buy or how to measure the return. The roadmap is a wish list.",
+    icon: Compass,
   },
   {
     n: "04",
-    title: "No clear AI strategy",
-    body: "Leadership wants AI yesterday. Nobody knows what to build, what to buy, or how to measure ROI. Vendor pitches blur together. The roadmap is a wish list.",
-    icon: Clock,
+    title: "AI use nobody can see.",
+    body: "Employees paste confidential data into ChatGPT, Copilot and a dozen other tools. There's no inventory, no policy and no audit trail.",
+    icon: EyeOff,
   },
 ];
 
@@ -38,15 +38,15 @@ export function Problems() {
         <AnimateIn>
           <div className="flex flex-wrap justify-between items-end gap-6 mb-14">
             <div className="max-w-180">
-              <span className="eyebrow">Where AI Adoption Breaks Down</span>
+              <span className="eyebrow">Where It Goes Wrong</span>
               <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
-                Most enterprise AI initiatives fail
+                Most teams lose time and control
                 <br className="hidden sm:block" /> in the same four ways.
               </h2>
             </div>
             <p className="text-(--muted) text-[15px] leading-relaxed max-w-90">
-              We've seen the pattern across automotive, aviation, logistics, and
-              fintech — and we know how to break it.
+              We&apos;ve seen the pattern across automotive, aviation, logistics
+              and fintech, and we know how to break it.
             </p>
           </div>
         </AnimateIn>

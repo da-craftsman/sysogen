@@ -1,16 +1,12 @@
 "use client";
 
 import { AnimateIn } from "@/components/AnimateIn";
-import { ArrowRight, ShieldCheck, FileText, MessageSquare, ExternalLink } from "lucide-react";
+import { ArrowRight, ShieldCheck, MessageSquare, ExternalLink } from "lucide-react";
 
 const trustItems = [
   {
     icon: ShieldCheck,
-    text: "We ship our own software. ProveStack is in early access, built and operated by our engineers — not a deck.",
-  },
-  {
-    icon: FileText,
-    text: "We're EU-registered with full legal disclosure (NIF 519018265, CAE 62201, Coimbra, Portugal).",
+    text: "We ship our own software. RFP OS and ProveStack are built by our own engineers.",
   },
   {
     icon: ExternalLink,
@@ -64,8 +60,8 @@ export function WhyTrust() {
               Book a free 30-minute call
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
-            <a href="/labs/provestack" className="btn-ghost">
-              See ProveStack
+            <a href="/products/rfp-os" className="btn-ghost">
+              Explore RFP OS
             </a>
           </div>
         </AnimateIn>

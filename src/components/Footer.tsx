@@ -9,9 +9,16 @@ const footerCols = [
   {
     h: "Services",
     items: [
-      { label: "AI Adoption & Governance", href: "/services/governance" },
+      { label: "AI Automation & Engineering", href: "/services/custom-solutions" },
       { label: "Production Engineering", href: "/services/engineering" },
-      { label: "AI Engineering", href: "/services/custom-solutions" },
+      { label: "AI Adoption & Governance", href: "/services/governance" },
+    ],
+  },
+  {
+    h: "Products",
+    items: [
+      { label: "RFP OS", href: "/products/rfp-os" },
+      { label: "Join the waitlist", href: "/waitlist" },
     ],
   },
   {
@@ -61,15 +68,15 @@ export function Footer() {
     >
       <div className="site-container py-16 pb-7">
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(4,1fr)] gap-10 mb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_repeat(5,1fr)] gap-10 mb-14">
           {/* Brand column */}
           <div>
             <Link href="/" className="inline-block mb-3.5">
               <Logo className="h-7 w-auto" forceWhite={!isDark} />
             </Link>
             <p className="text-(--muted) text-sm leading-relaxed max-w-70">
-              Engineering Intelligent Systems. EU-registered technology consultancy
-              headquartered in Coimbra, Portugal.
+              AI automation for the work nobody wants to do. Sysogen builds AI
+              products and custom automation. Founded in Coimbra, Portugal.
             </p>
 
             {/* Social links */}
@@ -133,8 +140,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="pt-6 border-t border-(--border) flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="font-mono-custom text-[11px] text-(--ink-mute) tracking-[0.04em]">
-            © 2026 SYSOGEN, UNIPESSOAL LDA · NIF 519018265 · Coimbra, Portugal ·
-            EU-registered IT Consultancy (CAE 62201)
+            © 2026 SYSOGEN, UNIPESSOAL LDA · NIF 519018265 · Coimbra, Portugal
           </p>
         </div>
       </div>

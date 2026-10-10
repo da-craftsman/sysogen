@@ -2,11 +2,11 @@
 
 import { AnimateIn } from '@/components/AnimateIn';
 import { useTheme } from '@/components/ThemeProvider';
+import { MockWindow } from '@/components/MockPanel';
 import {
   ArrowRight,
   ShieldCheck,
   GitCommit,
-  FileText,
   Terminal,
   ClipboardList,
   Server,
@@ -23,7 +23,7 @@ const provestackFeatures = [
   },
   {
     label:
-      'Verifier CLI for auditors and CI pipelines — no infra access required',
+      'Verifier CLI for auditors and CI pipelines, no infra access required',
     icon: Terminal,
   },
   { label: 'Tamper-evident audit log, exportable', icon: ClipboardList },
@@ -52,7 +52,7 @@ const ledgerRows = [
     id: 'c08a…f23',
     model: 'human',
     file: 'lib/crypto.ts',
-    sig: '—',
+    sig: 'n/a',
     color: '#9AA3B8',
   },
   {
@@ -108,8 +108,8 @@ export function Workshop() {
                 Built in-house.
               </h2>
               <p className='text-(--muted) text-[15px] leading-relaxed max-w-100'>
-                Tools we ship for our own engagements. Available to teams that
-                need them.
+                Tools we build for our own engineering work. Available to teams
+                that need them.
               </p>
             </div>
           </div>
@@ -161,7 +161,7 @@ export function Workshop() {
                   className='font-mono-custom text-[11px] tracking-[0.14em] uppercase mb-3.5'
                   style={{ color: 'var(--accent-2)' }}
                 >
-                  Built for EU AI Act Article 50 · SOC 2 · ISO 42001
+                  Built for SOC 2 · ISO 42001
                 </p>
 
                 <h3 className='font-medium leading-[1.1] mb-4 text-(--foreground) text-[clamp(22px,2.5vw,32px)] tracking-tight'>
@@ -173,9 +173,9 @@ export function Workshop() {
 
                 <p className='text-[15px] text-(--muted) leading-[1.65] mb-7 max-w-120'>
                   ProveStack signs AI-generated code at the moment a model
-                  writes it — so your auditor, your regulator, and your future
-                  self can answer "which lines came from which model, when,
-                  under whose review?"
+                  writes it, so your auditor and your future self can answer
+                  &quot;which lines came from which model, when, under whose
+                  review?&quot;
                 </p>
 
                 <ul className='grid gap-2.5 mb-8'>
@@ -211,82 +211,58 @@ export function Workshop() {
                   background: isDark ? 'rgba(0,0,0,0.15)' : 'var(--bg-2)',
                 }}
               >
-                <div
-                  className='w-full max-w-95 rounded-xl overflow-hidden border border-(--border-strong)'
-                  style={{
-                    background: isDark ? 'rgba(7,9,15,0.85)' : 'var(--card)',
-                    boxShadow: isDark
-                      ? '0 24px 48px -16px rgba(0,0,0,0.6)'
-                      : '0 24px 48px -16px rgba(0,0,0,0.12)',
-                  }}
-                >
-                  <div className='flex items-center justify-between px-4 py-3 border-b border-(--border)'>
-                    <div className='flex gap-1.5'>
-                      {[0, 1, 2].map((d) => (
-                        <span
-                          key={d}
-                          className={`w-2 h-2 rounded-full ${isDark ? 'bg-white/10' : 'bg-black/10'}`}
-                        />
-                      ))}
-                    </div>
-                    <span className='font-mono-custom text-[10px] text-(--ink-mute)'>
-                      provestack › ledger › main
+                <MockWindow title='provestack › ledger › main'>
+                  <div className='flex justify-between items-baseline mb-1'>
+                    <span className='font-mono-custom text-[10px] text-(--ink-mute) tracking-widest uppercase'>
+                      Signed commits · last 24h
+                    </span>
+                    <span className='font-mono-custom text-[10px] text-(--danger)'>
+                      ● 1 unsigned
+                    </span>
+                  </div>
+                  <div className='text-[36px] font-medium mb-4.5 text-(--foreground) tracking-tight'>
+                    412
+                    <span className='text-sm text-(--ink-mute) ml-2'>
+                      provenance records
                     </span>
                   </div>
 
-                  <div className='p-5'>
-                    <div className='flex justify-between items-baseline mb-1'>
-                      <span className='font-mono-custom text-[10px] text-(--ink-mute) tracking-widest uppercase'>
-                        Signed commits · last 24h
-                      </span>
-                      <span className='font-mono-custom text-[10px] text-(--danger)'>
-                        ● 1 unsigned
-                      </span>
-                    </div>
-                    <div className='text-[36px] font-medium mb-4.5 text-(--foreground) tracking-tight'>
-                      412
-                      <span className='text-sm text-(--ink-mute) ml-2'>
-                        provenance records
-                      </span>
-                    </div>
-
-                    <div className='flex flex-col gap-2'>
-                      {ledgerRows.map((r) => (
-                        <div
-                          key={r.id}
-                          className='grid items-center gap-2.5 grid-cols-[70px_1fr_auto]'
-                        >
-                          <span className='font-mono-custom text-[10.5px] text-(--ink-mute)'>
-                            {r.id}
+                  <div className='flex flex-col gap-2'>
+                    {ledgerRows.map((r) => (
+                      <div
+                        key={r.id}
+                        className='grid items-center gap-2.5 grid-cols-[70px_1fr_auto]'
+                      >
+                        <span className='font-mono-custom text-[10.5px] text-(--ink-mute)'>
+                          {r.id}
+                        </span>
+                        <div className='flex flex-col min-w-0'>
+                          <span className='font-mono-custom text-[11px] text-(--foreground) truncate'>
+                            {r.file}
                           </span>
-                          <div className='flex flex-col min-w-0'>
-                            <span className='font-mono-custom text-[11px] text-(--foreground) truncate'>
-                              {r.file}
-                            </span>
-                            <span className='font-mono-custom text-[9.5px] text-(--ink-mute)'>
-                              {r.model}
-                            </span>
-                          </div>
-                          <span
-                            className='text-[10px] px-1.5 py-0.5 rounded font-mono-custom'
-                            style={{
-                              background: `color-mix(in oklab,${r.color} 14%,transparent)`,
-                              color: r.color,
-                            }}
-                          >
-                            {r.sig}
+                          <span className='font-mono-custom text-[9.5px] text-(--ink-mute)'>
+                            {r.model}
                           </span>
                         </div>
-                      ))}
-                    </div>
+                        <span
+                          className='text-[10px] px-1.5 py-0.5 rounded font-mono-custom'
+                          style={{
+                            background: `color-mix(in oklab,${r.color} 14%,transparent)`,
+                            color: r.color,
+                          }}
+                        >
+                          {r.sig}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                </div>
+                </MockWindow>
               </div>
             </div>
           </div>
         </AnimateIn>
 
-        {/* Smaller cards — InboxGraph only */}
+        {/* Smaller cards: InboxGraph only */}
         <AnimateIn delay={0.15}>
           <div className='grid sm:grid-cols-2 gap-3.5'>
             {/* InboxGraph */}

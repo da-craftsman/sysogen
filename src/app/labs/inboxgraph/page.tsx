@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { WaitlistSlot } from "@/components/waitlist/WaitlistSlot";
 
 export const metadata: Metadata = {
-  title: "InboxGraph — Local Email Analysis",
+  title: "InboxGraph: Local Email Analysis",
   description:
     "InboxGraph runs entirely on your machine. Email graph analysis with no cloud dependency, no telemetry, no copies of your inbox sent anywhere. Research preview by Sysogen.",
 };
@@ -39,7 +39,7 @@ export default function InboxGraphPage() {
           <h2 className="text-[20px] font-semibold mb-5 tracking-tight text-(--foreground)">What it does</h2>
           <p className="text-[15px] text-(--muted) leading-[1.7]">
             InboxGraph reads your local mailbox, builds a graph of senders, threads, and topics, and surfaces
-            insights — without sending any data to a cloud service. The model runs on-device.
+            insights without sending any data to a cloud service. The model runs on-device.
           </p>
         </div>
 
@@ -63,14 +63,14 @@ export default function InboxGraphPage() {
           </p>
         </div>
 
-        {/* Notify */}
-        <a
-          href="mailto:hello@sysogen.com?subject=InboxGraph — notify me when ready"
-          className="btn-primary"
-        >
-          Notify me when it&apos;s ready
-          <ArrowRight className="w-3.5 h-3.5" />
-        </a>
+        {/* Waitlist */}
+        <div id="waitlist" className="card-base p-10 scroll-mt-28" style={{ borderColor: "rgba(34,211,238,0.3)" }}>
+          <h2 className="text-[20px] font-semibold mb-2 tracking-tight text-(--foreground)">Join the waitlist</h2>
+          <p className="text-[14px] text-(--muted) mb-6">
+            We&apos;re opening access in phases and will invite people in waves.
+          </p>
+          <WaitlistSlot preselect="inboxgraph" />
+        </div>
       </div>
     </div>
   );

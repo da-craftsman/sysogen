@@ -19,7 +19,7 @@ const cases = [
     tag: "US PET TECHNOLOGY PLATFORM",
     title: "18+ services modernized in 4 months",
     challenge:
-      "Java 11 → 17+ across the fleet, Spring Boot upgrades, and remediation of 200+ security vulnerabilities — without freezing feature work.",
+      "Java 11 → 17+ across the fleet, Spring Boot upgrades, and remediation of 200+ security vulnerabilities, without freezing feature work.",
     what: "Systematic upgrade across all services, Maven parent POM restructuring, Dependabot integration, CI/CD pipeline improvements.",
     metric: "95%",
     metricLabel: "reduction in vulnerabilities",

@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "AI Adoption & Governance",
   description:
-    "Stop Shadow AI, get measurable ROI, and survive your next audit. Sysogen's AI governance service covers EU AI Act readiness, vendor selection, and provenance instrumentation.",
+    "Use AI across the company without losing track of it. Sysogen's AI governance service covers shadow-AI inventory, AI risk and compliance readiness, vendor selection and provenance.",
 };
 
 export default function GovernancePage() {
@@ -35,9 +35,9 @@ export default function GovernancePage() {
               {[
                 "Shadow-AI inventory across your org (tools, prompts, data flows, risk exposure)",
                 "Acceptable-use policy framework, drafted with your legal and security teams",
-                "Vendor selection: model providers, AI platforms, dev-time AI tooling — with contract and DPA review",
-                "EU AI Act Article 50 readiness assessment, with a prioritized remediation roadmap",
-                "Provenance instrumentation (optional — via ProveStack)",
+                "Vendor selection: model providers, AI platforms and dev-time AI tooling, with contract and DPA review",
+                "AI risk and compliance readiness assessment, with a prioritized remediation roadmap",
+                "Provenance instrumentation (optional, via ProveStack)",
                 "KPI definition and reporting cadence so leadership can measure ROI",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[14.5px] text-(--foreground)">
@@ -70,7 +70,7 @@ export default function GovernancePage() {
             <h2 className="text-[20px] font-semibold mb-4 tracking-tight text-(--foreground)">When this is the right engagement</h2>
             <p className="text-[15px] text-(--muted) leading-[1.7]">
               You&apos;ve allowed AI tools into the workplace, and now leadership is asking &quot;what data are we
-              exposing?&quot;, &quot;are we compliant with the AI Act?&quot;, or &quot;is the productivity boost real?&quot; — and
+              exposing?&quot;, &quot;are we compliant?&quot;, or &quot;is the productivity boost real?&quot;, and
               the engineering team can&apos;t answer with evidence.
             </p>
           </div>

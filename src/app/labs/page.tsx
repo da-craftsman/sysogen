@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Sysogen Labs",
   description:
-    "Sysogen Labs — tools we build because we keep needing them. ProveStack for AI code provenance, InboxGraph for local email analysis. Available to teams that need them.",
+    "Sysogen Labs: tools we build because we keep needing them. ProveStack for AI code provenance, InboxGraph for local email analysis. Available to teams that need them.",
 };
 
 export default function LabsPage() {
@@ -49,8 +49,7 @@ export default function LabsPage() {
               </span>
             </div>
             <p className="text-[15px] text-(--muted) leading-[1.7] mb-6 max-w-2xl">
-              Cryptographic provenance for AI-generated code. Built for EU AI Act Article 50, SOC 2,
-              and ISO 42001 evidence.
+              Cryptographic provenance for AI-generated code, with evidence for SOC 2 and ISO 42001 audits.
             </p>
             <Link href="/labs/provestack" className="btn-primary">
               Learn more <ArrowRight className="w-3.5 h-3.5" />

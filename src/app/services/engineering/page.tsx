@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Production Engineering",
   description:
-    "Sysogen builds the production systems your AI ambitions assume already exist — event-driven architecture, Kubernetes migrations, zero-downtime database refactors, and CI/CD with provenance.",
+    "Sysogen builds the systems your automation depends on: event-driven architecture, Kubernetes migrations, zero-downtime database refactors and CI/CD with provenance.",
 };
 
 export default function EngineeringPage() {
@@ -23,7 +23,7 @@ export default function EngineeringPage() {
           <h1 className="mt-4 text-[clamp(36px,5vw,60px)] font-bold tracking-tight leading-[1.05] text-(--foreground)">
             Build the systems your
             <br />
-            <span className="gradient-text">AI ambitions assume already exist.</span>
+            <span className="gradient-text">automation depends on.</span>
           </h1>
         </div>
 
@@ -35,9 +35,9 @@ export default function EngineeringPage() {
               {[
                 "Event-driven architecture (Kafka, CQRS, event sourcing)",
                 "Kubernetes / EKS migrations and cost optimization",
-                "Zero-downtime database refactors — we've moved 90M+ row tables without a maintenance window",
+                "Zero-downtime database refactors: we've moved 90M+ row tables without a maintenance window",
                 "CI/CD with provenance baked in: every artifact signed, every deploy auditable",
-                "Legacy modernization where AI integration is the strategic goal",
+                "Legacy modernization where automation and AI are the strategic goal",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[14.5px] text-(--foreground)">
                   <span className="mt-2 w-4 h-px bg-(--accent-2) shrink-0 opacity-80" />
@@ -71,7 +71,7 @@ export default function EngineeringPage() {
           >
             <h2 className="text-[20px] font-semibold mb-4 tracking-tight text-(--foreground)">When this is the right engagement</h2>
             <p className="text-[15px] text-(--muted) leading-[1.7]">
-              You have a foundational system blocking the AI initiative your CEO announced. The data isn&apos;t
+              You have a foundational system blocking the automation or AI initiative your CEO announced. The data isn&apos;t
               ready, the pipelines don&apos;t exist, or the monolith is too brittle to extend. You need an
               engineering team that ships, not a strategy deck.
             </p>

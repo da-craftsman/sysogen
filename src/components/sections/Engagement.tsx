@@ -8,12 +8,12 @@ const steps = [
   {
     n: "01",
     title: "Discovery",
-    body: "We audit your systems, AI usage, and technical landscape. We identify Shadow AI risks and map opportunities.",
+    body: "We map your processes, systems and current AI use, then find the work most worth automating first.",
   },
   {
     n: "02",
     title: "Strategy",
-    body: "A prioritized roadmap aligned with business goals. No 200-page decks — actionable plans with clear milestones.",
+    body: "A prioritized roadmap aligned with business goals. No 200-page decks. Actionable plans with clear milestones.",
   },
   {
     n: "03",
@@ -60,7 +60,7 @@ export function Engagement() {
         </AnimateIn>
 
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 relative">
-          {/* Connector line — desktop only */}
+          {/* Connector line, desktop only */}
           <div
             aria-hidden="true"
             className="absolute hidden lg:block h-px top-5.5 left-[5%] right-[5%] opacity-50"

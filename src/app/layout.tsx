@@ -28,13 +28,16 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_TITLE = "Sysogen: AI automation for the work nobody wants to do";
+const SITE_DESCRIPTION =
+  "Sysogen builds AI products and custom automation for repetitive, document-heavy work: proposals, reviews, reporting and request triage. Founded in Coimbra, Portugal.";
+
 export const metadata: Metadata = {
   title: {
-    default: "Sysogen — AI you can ship, and prove you shipped responsibly",
+    default: SITE_TITLE,
     template: "%s | Sysogen",
   },
-  description:
-    "Sysogen helps regulated enterprises adopt AI without the security and compliance debt. EU AI Act Article 50 provenance, production engineering, and AI governance consultancy. Headquartered in Coimbra, Portugal.",
+  description: SITE_DESCRIPTION,
   icons: {
     icon: "/Sysogen.svg",
   },
@@ -42,23 +45,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://sysogen.com",
     siteName: "Sysogen",
-    title: "Sysogen — AI you can ship, and prove you shipped responsibly",
-    description:
-      "Sysogen helps regulated enterprises adopt AI without security and compliance debt. EU AI Act Article 50 compliance, ProveStack AI provenance, enterprise AI governance.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Sysogen — AI you can ship, and prove you shipped responsibly",
+        alt: SITE_TITLE,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sysogen — AI you can ship, and prove you shipped responsibly",
-    description:
-      "EU-headquartered engineering consultancy. AI governance, ProveStack code provenance, production-grade systems for regulated industries.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     images: ["/og-image.png"],
   },
   alternates: {

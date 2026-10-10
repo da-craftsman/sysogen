@@ -5,28 +5,28 @@ import { ArrowRight, ShieldCheck, Code2, Cpu } from "lucide-react";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Sysogen offers AI adoption & governance, production engineering, and AI engineering services for regulated enterprises. EU AI Act compliance, ProveStack provenance.",
+    "Sysogen offers AI automation and engineering, production engineering, and AI adoption and governance services. Less manual work, with people approving what matters.",
 };
 
 const services = [
   {
-    icon: ShieldCheck,
-    title: "AI Adoption & Governance",
-    lead: "Stop Shadow AI, pass your next audit, and measure ROI you can defend.",
+    icon: Cpu,
+    title: "AI Automation & Engineering",
+    lead: "Turn slow, manual processes into reliable automated ones.",
     bullets: [
-      "Shadow-AI inventory (4–6 weeks)",
-      "EU AI Act Article 50 readiness",
-      "Vendor selection and contract review",
+      "Document-heavy process automation",
+      "AI agents with human approval steps",
+      "Internal AI assistants on private documents",
     ],
-    href: "/services/governance",
-    accent: "var(--accent)",
-    accentBg: "rgba(79,140,255,0.08)",
-    accentBorder: "rgba(79,140,255,0.2)",
+    href: "/services/custom-solutions",
+    accent: "var(--gold)",
+    accentBg: "rgba(232,177,74,0.08)",
+    accentBorder: "rgba(232,177,74,0.2)",
   },
   {
     icon: Code2,
     title: "Production Engineering",
-    lead: "Build the systems your AI ambitions assume already exist.",
+    lead: "Build the systems your automation depends on.",
     bullets: [
       "Event-driven architecture",
       "Kubernetes migrations and cost optimization",
@@ -38,18 +38,18 @@ const services = [
     accentBorder: "rgba(34,211,238,0.2)",
   },
   {
-    icon: Cpu,
-    title: "AI Engineering",
-    lead: "Custom tooling for real teams, not demo-ware.",
+    icon: ShieldCheck,
+    title: "AI Adoption & Governance",
+    lead: "Use AI across the company without losing track of it.",
     bullets: [
-      "Internal AI assistants on private corpora",
-      "RAG pipelines with data boundaries",
-      "Provenance instrumentation",
+      "Shadow-AI inventory (4–6 weeks)",
+      "AI risk and compliance readiness",
+      "Vendor selection and contract review",
     ],
-    href: "/services/custom-solutions",
-    accent: "var(--gold)",
-    accentBg: "rgba(232,177,74,0.08)",
-    accentBorder: "rgba(232,177,74,0.2)",
+    href: "/services/governance",
+    accent: "var(--accent)",
+    accentBg: "rgba(79,140,255,0.08)",
+    accentBorder: "rgba(79,140,255,0.2)",
   },
 ];
 
@@ -128,6 +128,14 @@ export default function ServicesPage() {
             Read about how we work <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
+
+        {/* RFP OS pointer */}
+        <p className="text-[15px] text-(--muted) leading-[1.6] mb-12">
+          Need proposal automation? RFP OS takes a bid from solicitation to a cited first draft.{" "}
+          <Link href="/products/rfp-os" className="text-(--accent) font-medium hover:underline whitespace-nowrap">
+            Explore RFP OS →
+          </Link>
+        </p>
 
         {/* Bottom CTA */}
         <div className="flex flex-wrap gap-3">

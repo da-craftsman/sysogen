@@ -7,23 +7,23 @@ import { ShieldCheck, Code2, Cpu } from "lucide-react";
 const pillars = [
   {
     tag: "PILLAR 01",
-    title: "AI Adoption & Governance",
-    lead: "Stop Shadow AI. Get measurable ROI. Survive the next audit.",
-    accent: "var(--accent)",
-    accentBg: "rgba(79,140,255,0.1)",
-    accentBorder: "rgba(79,140,255,0.28)",
-    icon: ShieldCheck,
+    title: "AI Automation & Engineering",
+    lead: "Turn slow, manual processes into reliable automated ones.",
+    accent: "var(--gold)",
+    accentBg: "rgba(232,177,74,0.1)",
+    accentBorder: "rgba(232,177,74,0.28)",
+    icon: Cpu,
     bullets: [
-      "Shadow-AI inventory and policy framework (4–6 weeks)",
-      "Vendor selection and contract review (Anthropic, OpenAI, AWS Bedrock, Azure OpenAI)",
-      "EU AI Act readiness assessment with remediation roadmap",
-      "Provenance instrumentation via ProveStack (optional)",
+      "Process automation for document-heavy work: intake, extraction, drafting, review and routing",
+      "AI agents and workflows with a human approval step wherever mistakes are costly",
+      "Internal AI assistants on your private documents, with controlled retrieval",
+      "LLM cost control: token budgets, caching and model routing",
     ],
   },
   {
     tag: "PILLAR 02",
     title: "Production Engineering",
-    lead: "Build the systems your AI ambitions assume already exist.",
+    lead: "Build the systems your automation depends on.",
     accent: "var(--accent-2)",
     accentBg: "rgba(34,211,238,0.1)",
     accentBorder: "rgba(34,211,238,0.28)",
@@ -32,22 +32,22 @@ const pillars = [
       "Event-driven architecture on Kafka and Postgres",
       "Kubernetes / EKS migrations and cost optimization",
       "Zero-downtime database refactors (we've moved 90M+ row tables without a maintenance window)",
-      "CI/CD with provenance baked in — every artifact signed, every deploy auditable",
+      "CI/CD with provenance baked in: every artifact signed, every deploy auditable",
     ],
   },
   {
     tag: "PILLAR 03",
-    title: "AI Engineering",
-    lead: "Custom tooling for real teams, not demo-ware.",
-    accent: "var(--gold)",
-    accentBg: "rgba(232,177,74,0.1)",
-    accentBorder: "rgba(232,177,74,0.28)",
-    icon: Cpu,
+    title: "AI Adoption & Governance",
+    lead: "Use AI across the company without losing track of it.",
+    accent: "var(--accent)",
+    accentBg: "rgba(79,140,255,0.1)",
+    accentBorder: "rgba(79,140,255,0.28)",
+    icon: ShieldCheck,
     bullets: [
-      "Internal AI assistants with controlled retrieval (no public-model leakage)",
-      "RAG pipelines on private corpora",
-      "Provenance and audit instrumentation for AI-generated code",
-      "Developer-facing tooling (CLI, IDE extensions, CI integrations)",
+      "Shadow-AI inventory and acceptable-use policy (4–6 weeks)",
+      "Vendor selection and contract review (Anthropic, OpenAI, AWS Bedrock, Azure OpenAI)",
+      "AI risk and compliance readiness assessment, with a remediation roadmap",
+      "Provenance for AI-generated code via ProveStack (optional)",
     ],
   },
 ];
@@ -64,7 +64,7 @@ export function Services() {
             <h2 className="mt-4 font-bold tracking-tight leading-[1.1] text-(--foreground) text-[clamp(32px,3.5vw,52px)]">
               Three specialties,
               <br />
-              picked because they compound.
+              one goal: less manual work.
             </h2>
           </div>
         </AnimateIn>

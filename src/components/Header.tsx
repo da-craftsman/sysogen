@@ -7,9 +7,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
+import { AnnouncementBar } from "./AnnouncementBar";
 
-const navLinks = [
+const navLinks: { label: string; href: string; badge?: string }[] = [
   { label: "Home", href: "/" },
+  { label: "Products", href: "/products", badge: "New" },
   { label: "Services", href: "/services" },
   { label: "Approach", href: "/#approach" },
   { label: "Labs", href: "/labs" },
@@ -49,6 +51,7 @@ export function Header() {
             : "bg-transparent"
         }`}
       >
+        <AnnouncementBar />
         <div className="site-container">
           <div className="flex items-center justify-between h-16 lg:h-[68px] gap-6">
             {/* Logo */}
@@ -77,8 +80,9 @@ export function Header() {
                     />
 
                     <span className="relative">{link.label}</span>
+                    {link.badge && <NewBadge label={link.badge} />}
 
-                    {/* Active underline — slides between items via layoutId */}
+                    {/* Active underline: slides between items via layoutId */}
                     {active && (
                       <motion.span
                         layoutId="nav-active-line"
@@ -88,7 +92,7 @@ export function Header() {
                       />
                     )}
 
-                    {/* Hover underline — fades in when not active */}
+                    {/* Hover underline: fades in when not active */}
                     {!active && (
                       <span
                         className="absolute bottom-0.5 left-3 right-3 h-[2px] rounded-full pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150"
@@ -171,6 +175,7 @@ export function Header() {
                       }`}
                     >
                       {link.label}
+                      {link.badge && <NewBadge label={link.badge} />}
                     </Link>
                   );
                 })}
@@ -190,5 +195,13 @@ export function Header() {
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+function NewBadge({ label }: { label: string }) {
+  return (
+    <span className="relative ml-1.5 align-middle inline-flex items-center px-1.5 py-px rounded-full text-[9.5px] font-semibold tracking-[0.04em] uppercase text-(--accent) bg-(--accent)/10 border border-(--accent)/25">
+      {label}
+    </span>
   );
 }

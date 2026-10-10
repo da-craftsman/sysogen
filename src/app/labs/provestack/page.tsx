@@ -1,32 +1,33 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, GitCommit, Terminal, ClipboardList, Server, X } from "lucide-react";
+import { WaitlistSlot } from "@/components/waitlist/WaitlistSlot";
 
 export const metadata: Metadata = {
-  title: "ProveStack — AI Code Provenance",
+  title: "ProveStack: AI Code Provenance",
   description:
-    "ProveStack signs AI-generated code at the moment a model writes it. EU AI Act Article 50 evidence, SOC 2 controls, ISO 42001 compliance. Self-hosted proxy — your prompts never leave your network.",
+    "ProveStack signs AI-generated code at the moment a model writes it. Evidence for SOC 2 and ISO 42001 audits. Self-hosted proxy, so your prompts never leave your network.",
 };
 
 const features = [
   { icon: ShieldCheck, label: "Cryptographic signature embedded at generation time" },
   { icon: GitCommit, label: "Per-commit manifest: model, prompt, reviewer, CI run" },
-  { icon: Terminal, label: "Verifier CLI for auditors and CI pipelines — no infra access required" },
+  { icon: Terminal, label: "Verifier CLI for auditors and CI pipelines, no infra access required" },
   { icon: ClipboardList, label: "Tamper-evident audit log, exportable" },
   { icon: Server, label: "Self-hosted proxy: your prompts never reach our cloud" },
 ];
 
 const gives = [
-  "EU AI Act Article 50 evidence: which model contributed to which artifact, in a verifiable chain",
+  "Audit evidence: which model contributed to which artifact, in a verifiable chain",
   "SOC 2 / ISO 42001 control evidence for AI-assisted development",
   "Confidence that your codebase isn't quietly accumulating untraceable AI output",
   "A trust signal for your customers: cryptographically prove which parts of your product had human review",
 ];
 
 const doesNot = [
-  "It doesn't restrict which AI tools your developers use — it observes and signs them.",
+  "It doesn't restrict which AI tools your developers use. It observes and signs them.",
   "It doesn't reduce model quality or latency in a way developers notice.",
-  "It doesn't require your prompts to leave your network — the proxy is self-hosted.",
+  "It doesn't require your prompts to leave your network. The proxy is self-hosted.",
 ];
 
 export default function ProveStackPage() {
@@ -77,13 +78,13 @@ export default function ProveStackPage() {
         <div className="card-base p-10 mb-6">
           <h2 className="text-[20px] font-semibold mb-5 tracking-tight text-(--foreground)">The problem</h2>
           <p className="text-[15px] text-(--muted) leading-[1.7] mb-5">
-            Auditors, regulators, and your future engineering team will eventually ask the same question:
+            Auditors and your future engineering team will eventually ask the same question:
             &quot;Which lines of code came from which model, when, under whose review?&quot; Today, most teams can&apos;t answer.
           </p>
           <p className="text-[15px] text-(--muted) leading-[1.7]">
             Source control captures the diff, but not the model. Code review approves the change, but not
-            the provenance. CI signs the build artifact, but not the source intent. Under EU AI Act Article 50,
-            that gap is now a regulatory exposure — not just a documentation gap.
+            the provenance. CI signs the build artifact, but not the source intent. As more of your code is
+            written with AI, that gap becomes an audit finding waiting to happen.
           </p>
         </div>
 
@@ -92,7 +93,7 @@ export default function ProveStackPage() {
           <h2 className="text-[20px] font-semibold mb-5 tracking-tight text-(--foreground)">What ProveStack does</h2>
           <p className="text-[15px] text-(--muted) leading-[1.7]">
             ProveStack signs AI-generated code at the moment a model writes it. It embeds a tamper-resistant
-            signature directly in the source — invisible to humans, machine-detectable. Every commit ships with
+            signature directly in the source: invisible to humans, machine-detectable. Every commit ships with
             a signed manifest tying each change to its model, prompt, reviewer, and CI run. Auditors verify
             the chain with a free CLI; no access to your infrastructure required.
           </p>
@@ -103,9 +104,9 @@ export default function ProveStackPage() {
           <h2 className="text-[20px] font-semibold mb-5 tracking-tight text-(--foreground)">How it integrates</h2>
           <ul className="space-y-3">
             {[
-              "Drop-in proxy in front of your AI provider (Anthropic, OpenAI, AWS Bedrock, Azure OpenAI) — your prompts never touch our cloud",
+              "Drop-in proxy in front of your AI provider (Anthropic, OpenAI, AWS Bedrock, Azure OpenAI). Your prompts never touch our cloud",
               "Sign commits in CI with a one-line GitHub Action or GitLab CI job",
-              "Verify any commit with a single CLI command — works on a developer laptop or an auditor's workstation",
+              "Verify any commit with a single CLI command, on a developer laptop or an auditor's workstation",
               "Export tamper-evident audit log on demand, in formats your auditors already use",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-[14.5px] text-(--foreground)">
@@ -169,29 +170,20 @@ export default function ProveStackPage() {
         </div>
 
         {/* Waitlist */}
-        <div id="waitlist" className="card-base p-10 mb-6" style={{ borderColor: "rgba(79,140,255,0.3)" }}>
+        <div id="waitlist" className="card-base p-10 mb-6 scroll-mt-28" style={{ borderColor: "rgba(79,140,255,0.3)" }}>
           <h2 className="text-[20px] font-semibold mb-2 tracking-tight text-(--foreground)">Join the waitlist</h2>
           <p className="text-[14px] text-(--muted) mb-6">
             We&apos;re onboarding the first cohort now. Tell us about your setup and we&apos;ll be in touch.
           </p>
-          <a
-            href="mailto:hello@sysogen.com?subject=ProveStack waitlist&body=Name:%0AWork email:%0ATeam size:%0APrimary AI provider:%0AWhat success looks like for us:"
-            className="btn-primary"
-          >
-            Request early access
-            <ArrowRight className="w-3.5 h-3.5" />
-          </a>
-          <p className="mt-4 text-[12px] text-(--ink-mute)">
-            We&apos;ll reply within one business day.
-          </p>
+          <WaitlistSlot preselect="provestack" />
         </div>
 
         {/* Built by Sysogen */}
         <div className="card-base p-8">
           <p className="text-[14px] text-(--muted) leading-[1.7]">
             <span className="text-(--foreground) font-medium">Built by Sysogen.</span> ProveStack is built and
-            operated by Sysogen, an EU-headquartered engineering consultancy. We ship it because we use it
-            ourselves, and because our clients keep asking for it.
+            operated by Sysogen, an AI automation company. We ship it because we use it ourselves, and
+            because our clients keep asking for it.
           </p>
         </div>
       </div>

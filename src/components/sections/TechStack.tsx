@@ -6,15 +6,15 @@ import { useTheme } from "@/components/ThemeProvider";
 const cats = [
   {
     label: "AI & LLM Ops",
-    items: ["Anthropic API (Claude)", "OpenAI API", "LangChain", "Private RAG (pgvector, Qdrant)", "ProveStack (in-house)"],
+    items: ["Anthropic API (Claude)", "OpenAI API", "Amazon Bedrock", "LangChain", "Private RAG (pgvector, Qdrant, LanceDB)", "RFP OS and ProveStack (in-house)"],
   },
   {
     label: "Production Engineering",
-    items: ["Java / Spring Boot", "Kotlin", "Rust", "PostgreSQL", "Event-driven (Kafka, CQRS)"],
+    items: ["Go", "Python", "Java / Spring Boot", "Kotlin", "Rust", "PostgreSQL", "Event-driven (Kafka, CQRS)"],
   },
   {
     label: "Infrastructure",
-    items: ["Kubernetes (EKS)", "Terraform", "Vault", "Prometheus + Grafana", "GitHub Actions"],
+    items: ["Kubernetes (EKS)", "Terraform / OpenTofu", "Vault", "Prometheus + Grafana", "GitHub Actions"],
   },
 ];
 

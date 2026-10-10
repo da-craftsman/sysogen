@@ -97,7 +97,7 @@ export function ComingSoon({ title }: { title: string }) {
           className="text-[var(--muted)] text-lg mb-10 leading-relaxed"
         >
           We're putting the finishing touches on this page. In the meantime,
-          feel free to reach out — we're always happy to chat.
+          feel free to reach out. We're always happy to chat.
         </motion.p>
 
         {/* Actions */}

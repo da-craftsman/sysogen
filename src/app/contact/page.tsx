@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a free 30-minute discovery call with Sysogen. Tell us what you're trying to ship — we'll tell you honestly whether we're the right fit. No slides.",
+    "Book a free 30-minute discovery call with Sysogen. Tell us what you want to automate and we'll tell you honestly whether we're the right fit. No slides.",
 };
 
 export default function ContactPage() {
@@ -18,9 +18,9 @@ export default function ContactPage() {
         <div className="mb-16">
           <span className="eyebrow" style={{ color: "var(--accent-2)" }}>Let&apos;s talk</span>
           <h1 className="mt-4 text-[clamp(36px,5vw,64px)] font-bold tracking-tight leading-[1.05] text-(--foreground)">
-            Tell us what you&apos;re
+            Tell us what you
             <br />
-            <span className="gradient-text">trying to ship.</span>
+            <span className="gradient-text">want to automate.</span>
           </h1>
           <p className="mt-6 text-(--muted) text-[clamp(15px,1.5vw,17px)] leading-[1.65] max-w-2xl">
             We&apos;ll respond within one business day.
@@ -70,7 +70,6 @@ export default function ContactPage() {
                 <div>
                   <p className="text-(--foreground) font-medium">SYSOGEN, UNIPESSOAL LDA</p>
                   <p>Coimbra, Portugal</p>
-                  <p className="font-mono-custom text-[11px] text-(--ink-mute) mt-1">NIF 519018265</p>
                 </div>
               </div>
             </div>
@@ -82,14 +81,15 @@ export default function ContactPage() {
                   Response SLA
                 </div>
                 <p className="text-[14px] text-(--foreground) font-medium">Within one business day.</p>
-                <p className="text-[12px] text-(--muted) mt-0.5">Faster for urgent matters — say so in the subject line.</p>
+                <p className="text-[12px] text-(--muted) mt-0.5">Faster for urgent matters: say so in the subject line.</p>
               </div>
               <div>
                 <div className="font-mono-custom text-[10px] text-(--ink-mute) tracking-[0.12em] uppercase mb-1.5">
                   Time zones
                 </div>
-                <p className="text-[14px] text-(--foreground) font-medium">EU hours by default.</p>
-                <p className="text-[12px] text-(--muted) mt-0.5">We adapt to client time zones for engagement-critical calls.</p>
+                <p className="text-[14px] text-(--foreground) font-medium">
+                  We work remotely with teams worldwide and adapt to your time zone for important calls.
+                </p>
               </div>
             </div>
           </div>
